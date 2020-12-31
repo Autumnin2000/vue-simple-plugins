@@ -4,10 +4,23 @@
     :currentIndex = "curIdx"
     :callback="setOptions"
    />
+   <my-link
+   class="primary"
+    href="https://www.bilibili.com/"
+    target="_blank"
+    >
+    bilibili
+   </my-link>
+     <my-link
+     class="danger"
+    href="https://www.baidu.com/">
+    百度
+     </my-link>
 </template>
 
 <script>
 import { ref } from 'vue'
+import MyLink from '../libs/components/Link/index.vue'
 import MySelect from '../libs/components/Select/index.vue'
 export default {
   name: 'App',
@@ -38,7 +51,8 @@ export default {
     }
   },
   components: {
-    MySelect
+    MySelect,
+    MyLink
   }
 }
 </script>

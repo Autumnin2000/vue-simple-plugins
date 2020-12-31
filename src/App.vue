@@ -1,15 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <my-select
+    :data="data"
+    :currentIndex = "curIdx"
+    :callback="setOptions"
+   />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { ref } from 'vue'
+import MySelect from '../libs/components/Select/index.vue'
 export default {
   name: 'App',
+  setup(){
+    const curIdx = ref(1);
+    const data = [
+      {
+        id:1,
+        value:'orange',
+        text:'橙子'
+      },
+      {
+        id:2,
+        value:'apple',
+        text:'苹果'
+      },
+      {
+        id:3,
+        value:'pear',
+        text:'梨'
+      }
+    ];
+    const setOptions = (index,item) => {
+      console.log(item,index);
+    }
+    return {
+      setOptions,data,curIdx
+    }
+  },
   components: {
-    HelloWorld
+    MySelect
   }
 }
 </script>

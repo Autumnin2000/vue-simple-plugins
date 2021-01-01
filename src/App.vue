@@ -20,8 +20,8 @@
 
 <script>
 import { ref } from 'vue'
-import MyLink from '../libs/components/Link/index.vue'
-import MySelect from '../libs/components/Select/index.vue'
+// import MyLink from '../libs/components/Link/index.vue'
+// import MySelect from '../libs/components/Select/index.vue'
 export default {
   name: 'App',
   setup(){
@@ -51,8 +51,6 @@ export default {
     }
   },
   components: {
-    MySelect,
-    MyLink
   }
 }
 </script>
